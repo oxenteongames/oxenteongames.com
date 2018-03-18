@@ -60,13 +60,12 @@ h4 {
 .paragraph {
     font-size: 1.05rem;
     font-weight: 300;
-    text-indent: 2.5rem;
 }
 .vh-container {
     height: 100vh;
 }
 .logo {
-    width: 65%;
+    width: 50%;
 }
 /* // Medium devices (tablets, less than 992px) */
 @media (max-width: 991px) {
@@ -76,6 +75,9 @@ h4 {
     .logo {
         width: 30%;
         margin: 0 auto;
+    }
+    .paragraph {
+        text-indent: 2.5rem;
     }
     #contato:before {
         background: #000;

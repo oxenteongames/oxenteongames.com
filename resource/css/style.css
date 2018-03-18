@@ -11,15 +11,22 @@ body {
 
 #all {
     height: 100vh;
+    background: #000;
 }
 
-#oxente {
+#bg {
     width: 60%;
-    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    position: absolute;
+    background-image: url(http://lorempixel.com/1920/1920/sports/);
+    background-position: center;
+}
+
+#bg div {
+    background-color: rgba(0, 0, 0, .5);
 }
 
 #contato {
-    width: 40%;
     background: #000;
 }
 
@@ -30,7 +37,7 @@ body {
     background-size: cover;
     position: absolute;
     top: 0;
-    right: 40%;
+    right: 100%;
     width: 105px;
     height: 100%;
 }

@@ -13,99 +13,100 @@
 </head>
 
 <body>
-    <div id="all" class="container-fluid">
+    <section id="all">
+        <div id="bg">
+            <div class="w-100 h-100"></div>
+        </div>
         <div class="row h-100">
-            <div id="oxente" class="d-flex justify-content-center align-items-center">
-                <div class="mx-5 d-flex flex-column">
-                    <img class="w-50 mb-4" src="./resource/img/oxente.svg">
-                    <p>
-                        Nós somos uma organização eSports Brasileira, fundada no Nordeste. Nosso objetivo é oferecer e incentivar o eSports no Brasil,
-                        incentivando e dando suporte para players e streamers que desejem crescer juntamente conosco.
-                    </p>
+            <div class="container">
+                <div class="row h-100">
+                    <div id="oxente" class="col-7 d-flex justify-content-center align-items-center">
+                        <div class="mx-5 d-flex flex-column">
+                            <img class="w-50 mb-4" src="./resource/img/oxente.svg">
+                            <p>
+                                Nós somos uma organização eSports Brasileira, fundada no Nordeste. Nosso objetivo é oferecer e incentivar o eSports no Brasil,
+                                incentivando e dando suporte para players e streamers que desejem crescer juntamente conosco.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="contato" class="col-5 h-100 px-5 d-flex flex-column justify-content-center">
+                        <h1>Faça parte da nossa história!</h1>
+                        <h4>Conte-nos sobre você</h4>
+
+                        <div class="group inputs">
+                            <div class="form-wrapper">
+
+                                <form action="" class="material-form">
+                                    <div class="material-form__item">
+                                        <label for="name" class="material-form__label">Qual seu nome?</label>
+                                        <input type="text" required="required" id="name" class="material-form__field">
+                                    </div>
+
+                                    <div class="material-form__item">
+                                        <select name="question" id="question" class="material-form__field" required="required">
+                                            <option value="" style="display: none">Streamer ou jogar profissionalmente?</option>
+                                            <option value="">Streamer</option>
+                                            <option value="">Jogar profissionalmente</option>
+                                        </select>
+                                    </div>
+                                    <div id="checkbox" class="group my-5">
+                                        <div class="sf-checkbox">
+                                            <fieldset>
+                                                <legend> O que você joga? </legend>
+                                                <label class="mx-2">
+                                                    <input type="checkbox">
+                                                    <span class="checkbox-material">
+                                                        <span class="check"></span>
+                                                    </span> CS
+                                                </label>
+                                                <label class="mx-2">
+                                                    <input type="checkbox">
+                                                    <span class="checkbox-material">
+                                                        <span class="check"></span>
+                                                    </span> PUBG
+                                                </label>
+                                                <label class="mx-2">
+                                                    <input type="checkbox">
+                                                    <span class="checkbox-material">
+                                                        <span class="check"></span>
+                                                    </span> LOL
+                                                </label>
+                                                <label class="mx-2">
+                                                    <input type="checkbox">
+                                                    <span class="checkbox-material">
+                                                        <span class="check"></span>
+                                                    </span> OW
+                                                </label>
+                                                <label class="mx-2">
+                                                    <input type="checkbox">
+                                                    <span class="checkbox-material">
+                                                        <span class="check"></span>
+                                                    </span> DOTA 2
+                                                </label>
+                                                <label class="mx-2">
+                                                    <input type="checkbox">
+                                                    <span class="checkbox-material">
+                                                        <span class="check"></span>
+                                                    </span> OUTRO
+                                                </label>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+
+                                    <div class="material-form__item">
+                                        <label for="massage" class="material-form__label">Como podemos te contatar?</label>
+                                        <input type="text" required="required" id="massage" class="material-form__field">
+                                    </div>
+
+                                    <button class="butn butn-red ripple-effect" data-color="#fff">Send</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div id="contato" class="h-100 px-5 d-flex flex-column justify-content-center">
-                <h1>Faça parte da nossa história!</h1>
-                <h4>Conte-nos sobre você</h4>
-                <form class="mt-5">
-
-                    <div class="group inputs">
-                        <div class="form-wrapper">
-
-                            <form action="" class="material-form">
-                                <div class="material-form__item">
-                                    <label for="name" class="material-form__label">Qual seu nome?</label>
-                                    <input type="text" required="required" id="name" class="material-form__field">
-                                </div>
-
-                                <div class="material-form__item">
-                                    <select name="question" id="question" class="material-form__field" required="required">
-                                        <option value="" style="display: none">Streamer ou jogar profissionalmente?</option>
-                                        <option value="">Streamer</option>
-                                        <option value="">Jogar profissionalmente</option>
-                                    </select>
-                                </div>
-                                <div id="checkbox" class="group my-5">
-                                    <div class="sf-checkbox">
-                                        <fieldset>
-                                            <legend> O que você joga? </legend>
-                                            <label class="mx-2">
-                                                <input type="checkbox">
-                                                <span class="checkbox-material">
-                                                    <span class="check"></span>
-                                                </span> CS
-                                            </label>
-                                            <label class="mx-2">
-                                                <input type="checkbox">
-                                                <span class="checkbox-material">
-                                                    <span class="check"></span>
-                                                </span> PUBG
-                                            </label>
-                                            <label class="mx-2">
-                                                <input type="checkbox">
-                                                <span class="checkbox-material">
-                                                    <span class="check"></span>
-                                                </span> LOL
-                                            </label>
-                                            <label class="mx-2">
-                                                <input type="checkbox">
-                                                <span class="checkbox-material">
-                                                    <span class="check"></span>
-                                                </span> OW
-                                            </label>
-                                            <label class="mx-2">
-                                                <input type="checkbox">
-                                                <span class="checkbox-material">
-                                                    <span class="check"></span>
-                                                </span> DOTA 2
-                                            </label>
-                                            <label class="mx-2">
-                                                <input type="checkbox">
-                                                <span class="checkbox-material">
-                                                    <span class="check"></span>
-                                                </span> OUTRO
-                                            </label>
-                                        </fieldset>
-                                    </div>
-                                </div>
-
-                                <div class="material-form__item">
-                                    <label for="massage" class="material-form__label">Como podemos te contatar?</label>
-                                    <input type="text" required="required" id="massage" class="material-form__field">
-                                </div>
-
-                                <button class="butn butn-red ripple-effect" data-color="#fff">Send</button>
-                            </form>
-                        </div>
-
-
-                    </div>
-
-
-                </form>
-            </div>
         </div>
-    </div>
+    </section>
     <script>
         // Material form
         var materialForm;

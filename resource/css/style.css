@@ -17,7 +17,12 @@ body {
     background: #000;
 }
 
-#bg {
+#intro {
+    position: relative;
+    width: 100%;
+    overflow: auto;
+}
+#intro .bg {
     width: 60%;
     height: 100vh;
     position: absolute;
@@ -25,7 +30,7 @@ body {
     background-position: center;
 }
 
-#bg div {
+#intro .bg div {
     background-color: rgba(0, 0, 0, .5);
     width: 100vw;
     height: 100vh;

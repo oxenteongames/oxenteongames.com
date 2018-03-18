@@ -1,1 +1,167 @@
-It works!
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OxenteOnGames</title>
+    <link rel="stylesheet" href="./resource/css/bootstrap-4.0.0/bootstrap.min.css">
+    <link rel="stylesheet" href="https://raubarrera.neocities.org/cdpn/style.css">
+    <link rel="stylesheet" href="./resource/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <section id="all">
+        <div id="bg">
+            <div class="w-100 h-100"></div>
+        </div>
+        <div class="row h-100">
+            <div class="container">
+                <div class="row h-100">
+                    <div id="oxente" class="col-7 d-flex justify-content-center align-items-center">
+                        <div class="mx-5 d-flex flex-column">
+                            <img class="w-50 mb-4" src="./resource/img/oxente.svg">
+                            <p>
+                                Nós somos uma organização eSports Brasileira, fundada no Nordeste. Nosso objetivo é oferecer e incentivar o eSports no Brasil,
+                                incentivando e dando suporte para players e streamers que desejem crescer juntamente conosco.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="contato" class="col-5 h-100 px-5 d-flex flex-column justify-content-center">
+                        <h1>Faça parte da nossa história!</h1>
+                        <h4>Conte-nos sobre você</h4>
+
+                        <div class="group inputs">
+                            <div class="form-wrapper">
+
+                                <form action="" class="material-form">
+                                    <div class="material-form__item">
+                                        <label for="name" class="material-form__label">Qual seu nome?</label>
+                                        <input type="text" required="required" id="name" class="material-form__field">
+                                    </div>
+
+                                    <div class="material-form__item">
+                                        <select name="question" id="question" class="material-form__field" required="required">
+                                            <option value="" style="display: none">Streamer ou jogar profissionalmente?</option>
+                                            <option value="">Streamer</option>
+                                            <option value="">Jogar profissionalmente</option>
+                                        </select>
+                                    </div>
+                                    <div id="checkbox" class="group my-5">
+                                        <div class="sf-checkbox">
+                                            <fieldset>
+                                                <legend> O que você joga? </legend>
+                                                <label class="mx-2">
+                                                    <input type="checkbox">
+                                                    <span class="checkbox-material">
+                                                        <span class="check"></span>
+                                                    </span> CS
+                                                </label>
+                                                <label class="mx-2">
+                                                    <input type="checkbox">
+                                                    <span class="checkbox-material">
+                                                        <span class="check"></span>
+                                                    </span> PUBG
+                                                </label>
+                                                <label class="mx-2">
+                                                    <input type="checkbox">
+                                                    <span class="checkbox-material">
+                                                        <span class="check"></span>
+                                                    </span> LOL
+                                                </label>
+                                                <label class="mx-2">
+                                                    <input type="checkbox">
+                                                    <span class="checkbox-material">
+                                                        <span class="check"></span>
+                                                    </span> OW
+                                                </label>
+                                                <label class="mx-2">
+                                                    <input type="checkbox">
+                                                    <span class="checkbox-material">
+                                                        <span class="check"></span>
+                                                    </span> DOTA 2
+                                                </label>
+                                                <label class="mx-2">
+                                                    <input type="checkbox">
+                                                    <span class="checkbox-material">
+                                                        <span class="check"></span>
+                                                    </span> OUTRO
+                                                </label>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+
+                                    <div class="material-form__item">
+                                        <label for="massage" class="material-form__label">Como podemos te contatar?</label>
+                                        <input type="text" required="required" id="massage" class="material-form__field">
+                                    </div>
+
+                                    <button class="butn butn-red ripple-effect" data-color="#fff">Send</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Material form
+        var materialForm;
+        materialForm = function () {
+            return $('.material-form__field').focus(function () {
+                return $(this).closest('.material-form__item').addClass('focused has-value');
+            }).focusout(function () {
+                return $(this).closest('.material-form__item').removeClass('focused');
+            }).blur(function () {
+                if (!this.value) {
+                    $(this).closest('.material-form__item').removeClass('has-value');
+                }
+                return $(this).closest('.material-form__item').removeClass('focused');
+            });
+        };
+        $(function () {
+            return materialForm();
+        });
+
+        // Material button, ripple-effect
+        (function ($) {
+            $(".ripple-effect").click(function (e) {
+                var rippler = $(this);
+
+                // create .ink element if it doesn't exist
+                if (rippler.find(".ink").length == 0) {
+                    rippler.append("<span class='ink'></span>");
+                }
+
+                var ink = rippler.find(".ink");
+
+                // prevent quick double clicks
+                ink.removeClass("animate");
+
+                // set .ink diametr
+                if (!ink.height() && !ink.width()) {
+                    var d = Math.max(rippler.outerWidth(), rippler.outerHeight());
+                    ink.css({
+                        height: d,
+                        width: d
+                    });
+                }
+
+                // get click coordinates
+                var x = e.pageX - rippler.offset().left - ink.width() / 2;
+                var y = e.pageY - rippler.offset().top - ink.height() / 2;
+
+                // set .ink position and add class .animate
+                ink.css({
+                    top: y + 'px',
+                    left: x + 'px'
+                }).addClass("animate");
+            })
+        })(jQuery);
+    </script>
+</body>
+
+</html>

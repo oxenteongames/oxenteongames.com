@@ -20,7 +20,6 @@ body {
 #intro {
     position: relative;
     width: 100%;
-    overflow: auto;
 }
 #intro .bg {
     width: 60%;
